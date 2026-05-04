@@ -5,7 +5,13 @@ export const ContactCard = ({ contact, onDelete }) => (
     <li className="list-group-item p-4">
         <div className="row align-items-center">
             <div className="col-md-3 text-center">
-                <img src="https://picsum.photos" className="rounded-circle" alt="user" />
+                <img src={`https://picsum.photos/${contact.id}`} 
+                        className="rounded-circle shadow-sm" 
+                        alt="user" 
+                        style={{ width: "80px", height: "80px", objectFit: "cover" }} 
+                    />
+
+
             </div>
             <div className="col-md-7">
                 <h5>{contact.name}</h5>
